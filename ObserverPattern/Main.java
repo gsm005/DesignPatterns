@@ -1,7 +1,5 @@
 package DesignPatterns.ObserverPattern;
 
-import java.util.ArrayList;
-
 import DesignPatterns.ObserverPattern.Observable.*;
 import DesignPatterns.ObserverPattern.Observer.*;
 
@@ -21,7 +19,6 @@ public class Main {
         teslaStockObservable.setData(2000.0f);
 
         appleStockObservable.remove(emailNotificationAlert);
-        
         appleStockObservable.setData(300.0f);
 
     }
