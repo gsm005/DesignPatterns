@@ -5,12 +5,12 @@ import DesignPatterns.FactoryPattern.Shapes.Rectangle;
 import DesignPatterns.FactoryPattern.Shapes.Square;
 
 public class ShapeFactory {
-    public Shape getShape(String input){
+    public static Shape getShape(String input){
         if(input.equals("circle"))
             return new Circle();
         else if(input.equals("square"))
             return new Square();
-        else if(input.equals("Rectangle"))
+        else if(input.equals("rectangle"))
             return new Rectangle();
         return null;
     }
