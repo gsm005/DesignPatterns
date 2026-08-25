@@ -16,21 +16,17 @@ public class Board {
                 if(board[i][j]==null)
                     System.out.print("  ");
                 else
-                    System.out.print(board[i][j].getPT()+" ");
+                    System.out.print(board[i][j].getType()+" ");
             }
             System.out.println(" |");
         }
     }
 
-    public void makeMove(int r,int c,PlayingPiece pp){
-        board[r][c]=pp;
-    }
-    
-    public boolean validMove(int r,int c){
+    public boolean makeMove(int r,int c,PlayingPiece pp){
         if(r>=size || c>=size || r<0 || c<0 || board[r][c]!=null){
-            System.out.println("Invalid move");
             return false;
         }
+        board[r][c]=pp;
         return true;
     }
     
@@ -49,7 +45,7 @@ public class Board {
         for(int i=0;i<size;i++){
             int c=0;
             for(int j=0;j<size;j++){
-                if(board[i][j]!=null && board[i][j].getPT().equals(pp.getPT()))
+                if(board[i][j]!=null && board[i][j].getType()==(pp.getType()))
                     c++;
             }
             if(c==size)
@@ -59,7 +55,7 @@ public class Board {
         for(int i=0;i<size;i++){
             int c=0;
             for(int j=0;j<size;j++){
-                if(board[j][i]!=null && board[j][i].getPT().equals(pp.getPT()))
+                if(board[j][i]!=null && board[j][i].getType()==(pp.getType()))
                     c++;
             }
             if(c==size)
@@ -68,14 +64,14 @@ public class Board {
         //diagonals
         int c=0;
         for(int i=0;i<size;i++){
-            if(board[i][i]!=null && board[i][i].getPT().equals(pp.getPT()))
+            if(board[i][i]!=null && board[i][i].getType()==(pp.getType()))
                 c++;
         }
         if(c==size)
             return true;
         c=0;
         for(int i=size-1;i>=0;i--){
-            if(board[i][i]!=null && board[i][i].getPT().equals(pp.getPT()))
+            if(board[i][size-i-1]!=null && board[i][size-i-1].getType()==(pp.getType()))
                 c++;
         }
         if(c==size)

@@ -5,7 +5,7 @@ public class PlayingPiece {
     public PlayingPiece(PieceType pt){
         this.pt=pt;
     }
-    PieceType getPT(){
+    public PieceType getType(){
         return pt;
     }
 }

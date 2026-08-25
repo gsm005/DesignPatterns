@@ -39,11 +39,14 @@ public class Game {
         while(true){
             for(int i=0;i<noOfPlayers;i++){
                 System.out.println("Player "+players.get(i).getName()+" turn\nEnter row and column no.");
-                do{
+                while(true){
                     cr=sc.nextInt();
                     cc=sc.nextInt();
-                }while(!board.validMove(cr,cc));
-                board.makeMove(cr,cc,players.get(i).getPiece());
+                    if(board.makeMove(cr,cc,players.get(i).getPiece())){
+                        break;
+                    }
+                    System.out.println("Invalid move!! Enter valid row and column no.");
+                }
                 board.printBoard();
                 if(board.isWinner(players.get(i).getPiece()))
                 {
