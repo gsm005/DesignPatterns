@@ -4,11 +4,11 @@ public abstract class UserDetails {
     private final String phoneNumber;
     private boolean isNull;
 
-    public UserDetails(String name, String email, String phoneNumber) {
+    public UserDetails(String name, String email, String phoneNumber,boolean isNull) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        isNull=false;
+        this.isNull = isNull;
     }
 
     protected String getName() {
