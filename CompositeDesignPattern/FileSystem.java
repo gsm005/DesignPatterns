@@ -1,4 +1,4 @@
-package DesignPatterns.CompositeDesingPattern;
+package DesignPatterns.CompositeDesignPattern;
 
 public abstract class FileSystem {
     String name;

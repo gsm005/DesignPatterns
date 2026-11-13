@@ -1,4 +1,4 @@
-package DesignPatterns.CompositeDesingPattern;
+package DesignPatterns.CompositeDesignPattern;
 import java.util.*;
 
 public class Directory extends FileSystem {

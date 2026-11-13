@@ -1,4 +1,4 @@
-package DesignPatterns.CompositeDesingPattern;
+package DesignPatterns.CompositeDesignPattern;
 
 public class File extends FileSystem {
     public File(String name) {
